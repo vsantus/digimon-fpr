@@ -37,7 +37,7 @@ Este é um projeto de teste desenvolvido para a vaga de Front-end na FPR Soluç�
 2. Acesse o diretório do projeto:
 
    ```bash
-   cd digimon-fpr
+   cd digimonfpr
    ```
 
 3. Instale as dependências:
