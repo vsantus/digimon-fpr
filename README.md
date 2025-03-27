@@ -21,11 +21,6 @@ Este é um projeto de teste desenvolvido para a vaga de Front-end na FPR Soluç�
 - Exibição dos Digimons com paginação de 12 por vez.
 - Seleção de Digimon com hover.
 
-## Responsividade
-
-- Versão adaptada para desktop (1920px e 1366px).
-- Versão mobile.
-
 ## Como Executar
 
 1. Clone o repositório:
@@ -58,3 +53,6 @@ Este é um projeto de teste desenvolvido para a vaga de Front-end na FPR Soluç�
 
 - Algumas funcionalidades ainda estão em desenvolvimento, como variação da troca de temas, filtro por nível de Digimon, adicionar para favorito, modal na pagina todos
 - O layout foi adaptado para ser responsivo nas resoluções solicitadas.
+- Versão adaptada para desktop (1920px e 1366px).
+- Versão mobile.
+
