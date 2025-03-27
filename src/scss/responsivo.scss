@@ -1,0 +1,50 @@
+// @media (max-width: 1366px) {
+//     .containerPrincipal {
+//         width: 100%;
+//         height: auto; /* Ajusta a altura automaticamente em telas menores */
+//     }
+
+//     .main-content {
+//         width: 90%; /* Ajusta a largura do conteúdo principal para telas menores */
+//         position: relative; /* Garante que o conteúdo seja ajustado corretamente */
+//         left: 5%; /* Adiciona uma margem para centralizar */
+//     }
+
+//     .conteudo-esquerda {
+//         width: 80%; /* Ajusta a largura do conteúdo da esquerda */
+//         height: auto; /* Permite que a altura seja ajustada automaticamente */
+//         position: relative;
+//         left: 0;
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     .containerPrincipal {
+//         width: 100%;
+//         height: auto;
+//         flex-direction: column; /* Alinha os itens verticalmente */
+//     }
+
+//     .main-content {
+//         width: 100%;
+//         text-align: center;
+//         left: 0; /* Centraliza o conteúdo */
+//     }
+
+//     .conteudo-esquerda {
+//         width: 100%;
+//         height: auto;
+//         position: relative;
+//         left: 0;
+//     }
+
+//     .temas-opcoes {
+//         flex-direction: column; /* Alinha os temas em uma coluna */
+//         gap: 10px;
+//     }
+
+//     .tema {
+//         width: 100%;
+//         height: 50px; /* Ajusta o tamanho dos temas */
+//     }
+// }

@@ -1,0 +1,106 @@
+@import './variables.scss';
+
+.digimon-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    background: $background-color;
+
+    .digimon-header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+
+        img {
+            width: 171px;
+            height: 149px;
+        }
+
+        .botaoVoltar {
+            background-color: $verde-cor;
+            color: $branco-cor;
+            width: 166px;
+            height: 43px;
+            top: 846px;
+            left: 509px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        
+            &:hover {
+                transform: scale(1.1); 
+            }
+        }
+        
+    }
+
+    .digimon-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 20px;
+
+        .digimon-card {
+            background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        width: 100%; /* Adicionando uma largura fixa para evitar que o conteúdo ultrapasse */
+
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+            }
+
+            h3 {
+                margin: 10px 0 5px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            p {
+                color: #555;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .pagination {
+        display: flex;
+        gap: 10px;
+
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background: #0056b3;
+            }
+
+            &:disabled {
+                background: #ccc;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

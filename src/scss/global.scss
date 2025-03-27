@@ -1,0 +1,44 @@
+@import './variables'; 
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.6;
+    height: 100%;
+}
+
+body {
+    font-family: $font-primary !important;
+    background-color: $coragem-background;
+    height: 100%; /* Alterado para altura total sem limitar */
+    overflow: hidden; /* Impede rolagem horizontal */
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
