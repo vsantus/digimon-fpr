@@ -16,8 +16,8 @@ html {
 body {
     font-family: $font-primary !important;
     background-color: $coragem-background;
-    height: 100%; /* Alterado para altura total sem limitar */
-    overflow: hidden; /* Impede rolagem horizontal */
+    height: 100%; 
+    overflow: hidden;
 }
 
 img,
