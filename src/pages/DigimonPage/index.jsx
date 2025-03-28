@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { buscarTodosDigimons } from "../../hooks/useDigimon";  // Certifique-se de que o caminho esteja correto
+import { buscarTodosDigimons } from "../../hooks/useDigimon";  
 import "../../scss/DigimonEstilo.scss";
 import "../../scss/HomeEstilo.scss";
 
