@@ -4,17 +4,32 @@ $font-primary: "Poppins", sans-serif;
 
 
 // cores background
-$background-color: #D6ECE0;
+$background-original: #D6ECE0;
+$background-esperança: url(https://i.postimg.cc/QC9bMWHp/abe66cf7-ff27-49ab-aada-a2866766dc51-1.png);
+$background-sabedoria: url(https://i.postimg.cc/05zRSWSC/64e1fbb7-c7aa-47e5-9265-0394e7c4d4d2-1.png);
+$background-confianca: url(https://i.postimg.cc/FRnpmxsr/6f8edb97-2ce0-460f-ad6a-0c3f01fdb1bd-2.png);
+$background-coragem: url(https://i.postimg.cc/CxyvzJCd/96a36b08-1e51-43f1-8785-dc16420e082a-1.png);
+$background-amizade: url(https://i.postimg.cc/FKNDxRB4/87a5cfa0-5ea1-42ff-a692-73f33601b02b-1.png);
+$background-luz: url(https://i.postimg.cc/sxkJGDhb/5b963aac-92f2-4448-8d42-3814fb7e4976-1.png);
+$background-amor: url(https://i.postimg.cc/HkQ6553z/446e8952-1dd7-4735-ae3e-6763c5d4195c-1.png);
+$background-sinceridade: url(https://i.postimg.cc/xd5gp2wb/c98084a9-6c9a-4247-a4d4-e8a1e25e7ab1-1.png);
 
-//cores para fonte
-
+//cores diversas
 $laranja-cor: #F46D1B;
+$laranjaClaro-cor: #f8a12E;
 $cinza-cor: #666666;
 $verde-cor: #34AC40;
+$verdeClaro-cor: #6bd476;
 $branco-cor: #fff;
+$ciano-cor:#0580BB;
+$roxoClaro-cor: #cbaade;
+$azulClaro-cor: #78d1f1;
+$amarelo-cor: #ffd05c;
+$amareloClaro-cor: #fec435;
+$amareloPiu-cor: #fdf753;
 
-//cores temas
 
+//cores para temas
 $esperanca: #209441;
 $sabedoria : #CB1E31;
 $confianca : #7D4D8B;
@@ -26,5 +41,4 @@ $sinceridade : #F282B0;
 
 
 //temas
-
 $coragem-background: url('https://i.postimg.cc/CxyvzJCd/96a36b08-1e51-43f1-8785-dc16420e082a-1.png');

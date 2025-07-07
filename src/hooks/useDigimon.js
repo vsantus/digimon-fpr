@@ -24,7 +24,7 @@ export function useDigimon() {
         if (resultado.length > 0) {
             setListaDigimons(resultado);
         } else {
-            window.alert("Nenhum Digimon encontrado."); 
+            window.alert("Nenhum Digimon encontrado, pesquise o nome correto!"); 
             setListaDigimons([]); 
         }
     };

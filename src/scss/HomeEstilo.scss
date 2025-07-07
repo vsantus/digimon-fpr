@@ -1,8 +1,9 @@
 @import "./variables";
 
 .containerHome {
+    // alterar esse background com os botoes de NavTemas
     font-family: $font-primary;
-    background: $background-color;
+    background: $background-original;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +14,533 @@
     display: flex;
 }
 
+.tema-esperanca {
+    .containerHome {
+        background: $background-esperança;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conteudoLateral {
+        display: none; // Esconde a imagem lateral
+    }
+
+    .conteudoCentral {
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+        h1 {
+            color: $laranjaClaro-cor; // Ou outra cor do tema
+        }
+
+        h4,
+        p {
+            color: $branco-cor; // Ou outra cor do tema
+        }
+
+        .botoes .botaoPesquisa {
+            background-color: $laranjaClaro-cor;
+        }
+
+        .botoes .verTodos {
+            background-color: $verdeClaro-cor;
+        }
+
+        .barraPesquisa {
+            .iconePesquisa {
+                color: $ciano-cor;
+            }
+
+            .inputPesquisa {
+                border: 1px solid $ciano-cor;
+            }
+        }
+    }
+
+    nav {
+
+        h2{
+            color: $branco-cor;
+        }
+        .temas-opcoes {
+            .esperanca {
+                background: $branco-cor;
+                color: $esperanca;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+
+        }
+
+    }
+
+}
+
+.tema-sabedoria {
+    .containerHome {
+        background: $background-sabedoria;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conteudoLateral {
+        display: none; // Esconde a imagem lateral
+    }
+
+    .conteudoCentral {
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+        h1 {
+            color: $laranjaClaro-cor; // Ou outra cor do tema
+        }
+
+        h4,
+        p {
+            color: $branco-cor; // Ou outra cor do tema
+        }
+
+        .botoes .botaoPesquisa {
+            background-color: $laranjaClaro-cor;
+        }
+
+        .botoes .verTodos {
+            background-color: $verdeClaro-cor;
+        }
+
+        .barraPesquisa {
+            .iconePesquisa {
+                color: $ciano-cor;
+            }
+
+            .inputPesquisa {
+                border: 1px solid $ciano-cor;
+            }
+        }
+
+    }
+
+    nav {
+        h2{
+            color: $branco-cor;
+        }
+        .temas-opcoes {
+            .sabedoria {
+                background: $branco-cor;
+                color: $sabedoria;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+        }
+    }
+
+}
+
+.tema-confianca {
+    .containerHome {
+        background: $background-confianca;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conteudoLateral {
+        display: none; // Esconde a imagem lateral
+    }
+
+    .conteudoCentral {
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+        h1 {
+            color: $laranjaClaro-cor; // Ou outra cor do tema
+        }
+
+        h4,
+        p {
+            color: $branco-cor; // Ou outra cor do tema
+        }
+
+        .botoes .botaoPesquisa {
+            background-color: $laranjaClaro-cor;
+        }
+
+        .botoes .verTodos {
+            background-color: $roxoClaro-cor;
+        }
+
+        .barraPesquisa {
+            .iconePesquisa {
+                color: $ciano-cor;
+            }
+
+            .inputPesquisa {
+                border: 1px solid $ciano-cor;
+            }
+        }
+    }
+
+    nav {
+        h2{
+            color: $branco-cor;
+        }
+        .temas-opcoes {
+            .confianca {
+                background: $branco-cor;
+                color: $confianca;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+        }
+    }
+
+}
+
+.tema-coragem {
+    .containerHome {
+        background: $background-coragem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conteudoLateral {
+        display: none; // Esconde a imagem lateral
+    }
+
+    .conteudoCentral {
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+        h1 {
+            color: $amareloClaro-cor; // Ou outra cor do tema
+        }
+
+        h4,
+        p {
+            color: $branco-cor; // Ou outra cor do tema
+        }
+
+        .botoes .botaoPesquisa {
+            background-color: $amareloClaro-cor;
+        }
+
+        .botoes .verTodos {
+            background-color: $amor;
+        }
+
+        .barraPesquisa {
+            .iconePesquisa {
+                color: $ciano-cor;
+            }
+
+            .inputPesquisa {
+                border: 1px solid $ciano-cor;
+            }
+        }
+    }
+
+    nav {
+
+        h2{
+            color: $branco-cor;
+        }
+        .temas-opcoes {
+            .coragem {
+                background: $branco-cor;
+                color: $coragem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.tema-amizade {
+    .containerHome {
+        background: $background-amizade;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conteudoLateral {
+        display: none; // Esconde a imagem lateral
+    }
+
+    .conteudoCentral {
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+        h1 {
+            color: $amarelo-cor; // Ou outra cor do tema
+        }
+
+        h4,
+        p {
+            color: $branco-cor; // Ou outra cor do tema
+        }
+
+        .botoes .botaoPesquisa {
+            background-color: $amarelo-cor;
+        }
+
+        .botoes .verTodos {
+            background-color: $azulClaro-cor;
+        }
+
+        .barraPesquisa {
+            .iconePesquisa {
+                color: $ciano-cor;
+            }
+
+            .inputPesquisa {
+                border: 1px solid $ciano-cor;
+            }
+        }
+    }
+
+    nav {
+
+        h2{
+            color: $branco-cor;
+        }
+        .temas-opcoes {
+            .amizade {
+                background: $branco-cor;
+                color: $amizade;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.tema-luz {
+    .containerHome {
+        background: $background-luz;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conteudoLateral {
+        display: none; // Esconde a imagem lateral
+    }
+
+    .conteudoCentral {
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+        h1 {
+            color: $amareloPiu-cor; // Ou outra cor do tema
+        }
+
+        h4,
+        p {
+            color: $branco-cor; // Ou outra cor do tema
+        }
+
+        .botoes .botaoPesquisa {
+            color: $cinza-cor;
+            background-color: $amareloPiu-cor;
+        }
+
+        .botoes .verTodos {
+            background-color: $roxoClaro-cor;
+        }
+
+        .barraPesquisa {
+            .iconePesquisa {
+                color: $ciano-cor;
+            }
+
+            .inputPesquisa {
+                border: 1px solid $ciano-cor;
+            }
+        }
+    }
+
+    nav {
+        h2{
+            color: $branco-cor;
+        }
+        .temas-opcoes {
+            .luz {
+                background: $branco-cor;
+                color: $luz;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.tema-amor {
+    .containerHome {
+        background: $background-amor;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conteudoLateral {
+        display: none; // Esconde a imagem lateral
+    }
+
+    .conteudoCentral {
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+        h1 {
+            color: $amareloPiu-cor; // Ou outra cor do tema
+        }
+
+        h4,
+        p {
+            color: $branco-cor; // Ou outra cor do tema
+        }
+
+        .botoes .botaoPesquisa {
+            color: $cinza-cor;
+            background-color: $amareloPiu-cor;
+        }
+
+        .botoes .verTodos {
+            background-color: $roxoClaro-cor;
+        }
+
+        .barraPesquisa {
+            .iconePesquisa {
+                color: $ciano-cor;
+            }
+
+            .inputPesquisa {
+                border: 1px solid $ciano-cor;
+            }
+        }
+    }
+
+    nav {
+
+        h2{
+            color: $branco-cor;
+        }
+        .temas-opcoes {
+            .amor {
+                background: $branco-cor;
+                color: $amor;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.tema-sinceridade {
+    .containerHome {
+        background: $background-sinceridade;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .conteudoLateral {
+        display: none; // Esconde a imagem lateral
+    }
+
+    .conteudoCentral {
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+        h1 {
+            color: $amareloPiu-cor; // Ou outra cor do tema
+        }
+
+        h4,
+        p {
+            color: $branco-cor; // Ou outra cor do tema
+        }
+
+        .botoes .botaoPesquisa {
+            color: $cinza-cor;
+            background-color: $amareloPiu-cor;
+        }
+
+        .botoes .verTodos {
+            background-color: $roxoClaro-cor;
+        }
+    .barraPesquisa {
+            .iconePesquisa {
+                color: $ciano-cor;
+            }
+
+            .inputPesquisa {
+                border: 1px solid $ciano-cor;
+            }
+        }
+    }
+
+    nav {
+
+        h2{
+            color: $branco-cor;
+        }
+        .temas-opcoes {
+            .sinceridade {
+                background: $branco-cor;
+                color: $sinceridade;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
 header {
+    // topo da pagina com logo e botoes de troca de tema
     position: fixed;
     top: 0;
     left: 0;
@@ -26,6 +553,7 @@ header {
 }
 
 .logo {
+    // logo canto superior esquerdo
     margin-left: 22px;
     display: flex;
     justify-content: center;
@@ -36,8 +564,8 @@ header {
     padding: 10px;
     border-radius: 30px;
     color: $branco-cor;
-    width: 55px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
     overflow: hidden;
     white-space: nowrap;
 
@@ -50,13 +578,18 @@ header {
 }
 
 nav {
+    // botoes de troca de tema 
     margin-right: 25px;
+    margin-top: 5px;
+    right: -0px;
+    top: 10px;
+    position: absolute;
 
     h2 {
         color: $laranja-cor;
         font-family: $font-primary;
         font-weight: 500px;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 100%;
         letter-spacing: 0px;
         margin-bottom: 5px;
@@ -67,21 +600,21 @@ nav {
         display: flex;
         list-style: none;
         gap: 8px;
-        padding: 0;
         position: relative;
+        padding: 10px;
 
         .tema {
+            //dimensão do botao
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            cursor: pointer;
             font-weight: bold;
             padding: 5px 10px;
-            border-radius: 30px;
+            border-radius: 40px;
             color: $branco-cor;
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             overflow: hidden;
             white-space: nowrap;
             gap: 5px;
@@ -102,6 +635,7 @@ nav {
 
 
             &:hover {
+                transition: background-color 0.3s ease, color 0.3s ease;
                 background-color: $branco-cor;
                 color: $esperanca;
             }
@@ -111,6 +645,7 @@ nav {
             background: $sabedoria;
 
             &:hover {
+                transition: background-color 0.3s ease, color 0.3s ease;
                 background-color: $branco-cor;
                 color: $sabedoria;
             }
@@ -120,6 +655,7 @@ nav {
             background: $confianca;
 
             &:hover {
+                transition: background-color 0.3s ease, color 0.3s ease;
                 background-color: $branco-cor;
                 color: $confianca;
             }
@@ -129,6 +665,7 @@ nav {
             background: $coragem;
 
             &:hover {
+                transition: background-color 0.3s ease, color 0.3s ease;
                 background-color: $branco-cor;
                 color: $coragem;
             }
@@ -138,6 +675,7 @@ nav {
             background: $amizade;
 
             &:hover {
+                transition: background-color 0.3s ease, color 0.3s ease;
                 background-color: $branco-cor;
                 color: $amizade;
             }
@@ -147,6 +685,7 @@ nav {
             background: $luz;
 
             &:hover {
+                transition: background-color 0.3s ease, color 0.3s ease;
                 background-color: $branco-cor;
                 color: $luz;
             }
@@ -156,6 +695,7 @@ nav {
             background: $amor;
 
             &:hover {
+                transition: background-color 0.3s ease, color 0.3s ease;
                 background-color: $branco-cor;
                 color: $amor;
             }
@@ -165,15 +705,17 @@ nav {
             background: $sinceridade;
 
             &:hover {
+                transition: background-color 0.3s ease, color 0.3s ease;
                 background-color: $branco-cor;
                 color: $sinceridade;
             }
         }
 
         span {
+            // titulo dos botoes
             font-family: $font-primary;
             font-weight: 500px;
-            font-size: 6px;
+            font-size: 5px;
             line-height: 100%;
             letter-spacing: 0%;
             text-align: center;
@@ -184,15 +726,18 @@ nav {
 }
 
 .principalContainer {
+    // container principal com infos
     display: flex;
     position: relative;
     justify-content: space-between;
     margin-top: 60px;
     width: 100%;
+    height: 100vh;
 
 }
 
 .conteudoCentral {
+    // conteudo esquerda logo, textos etc
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -202,13 +747,29 @@ nav {
     position: absolute;
     left: 110px;
 
-    img {
 
+    .img1 {
+        //logo fpr colorida
+
+        margin-bottom: 35px;
         width: 271px;
         height: 399px;
+
+    }
+
+    .img2 {
+        // logo fpr branca
+
+        margin-bottom: 35px;
+        width: 271px;
+        height: 399px;
+        display: none;
+
+
     }
 
     h1 {
+        //alterar cor ao clicar botao de tema
         color: $laranja-cor;
         font-family: $font-primary;
         font-weight: 600px;
@@ -219,23 +780,25 @@ nav {
     }
 
     h4 {
+        //alterar cor ao clicar botao de tema
         color: $cinza-cor;
         font-family: $font-primary;
         font-weight: 500px;
-        font-size: 64px;
+        font-size: 44px;
         line-height: 100%;
         text-align: left;
         margin-bottom: 20px;
     }
 
     p {
+        //alterar cor ao clicar botao de tema 
         color: $cinza-cor;
         font-family: $font-primary;
         font-weight: 400px;
-        font-size: 18px;
+        font-size: 15px;
         line-height: 120%;
         text-align: left;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     .barraPesquisa {
@@ -246,7 +809,6 @@ nav {
         width: 100%;
 
         .iconePesquisa {
-            // alterar para botao e ser o enter do input
             font-size: 20px;
             color: $verde-cor;
             position: absolute;
@@ -289,6 +851,7 @@ nav {
 
 
         .botaoPesquisa {
+            //alterar cor ao clicar botao de tema
             background-color: $laranja-cor;
             color: $branco-cor;
             width: 226px;
@@ -304,6 +867,7 @@ nav {
         }
 
         .verTodos {
+            //alterar cor ao clicar botao de tema
             background-color: $verde-cor;
             color: $branco-cor;
             width: 166px;
@@ -321,13 +885,15 @@ nav {
 }
 
 .conteudoLateral {
+    // conteudo lateral direita com imagem
     width: 407px;
     height: 559px;
     position: absolute;
-    left: 760px;
+    left: 900px;
     top: 10px;
 
     img {
+        // remover imagem ao clicar botao de tema
         width: 100%;
         height: 100%;
     }
