@@ -1,25 +1,27 @@
 import React, { useState } from "react";
-import { Search } from "lucide-react";
-import { useDigimon } from "../../hooks/useDigimon";
+import { Icon, Search } from "lucide-react";
+import { useDigimonContext } from "../../context/DigimonContext";
 import "../../scss/variables.scss";
 import "../../scss/HomeEstilo.scss";
+import "../../scss/Temas.scss";
 
+import IconSuperior from "../../components/iconSuperior";
 import NavTemas from "../../components/NavTemas"
 
+
 function HomePage() {
-    const { listaDigimons, mensagemErro, buscarDigimon, carregarTodosDigimons } = useDigimon();
+    const { mensagemErro, buscarDigimon, carregarTodosDigimons, setDigimonSelecionado } = useDigimonContext ();
     const [termoBusca, setTermoBusca] = useState("");
 
     const handleBusca = () => {
         buscarDigimon(termoBusca); // Chama a função de busca
+        setDigimonSelecionado(termoBusca);
     };
 
     return (
-        <div className="containerHome">
+        <div className="containerHome"> 
             <header>
-                <div className="logo">
-                    {listaDigimons.length > 0 && <img src={listaDigimons[0].img} alt={listaDigimons[0].name} />}
-                </div>
+                <IconSuperior />
                 <NavTemas />
             </header>
 

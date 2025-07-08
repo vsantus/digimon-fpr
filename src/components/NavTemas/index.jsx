@@ -6,14 +6,14 @@ function NavTemas() {
     const { tema, trocarTema } = useContext(TemaContext);
 
     const temas = [
-        { id: "esperanca", label: "ESPERANÇA", img: "https://i.postimg.cc/HnYMc7vr/esperanca-branco-1.png" },
-        { id: "sabedoria", label: "SABEDORIA", img: "https://i.postimg.cc/MGKwww6w/sabedoria-branco.png" },
-        { id: "confianca", label: "CONFIANÇA", img: "https://i.postimg.cc/13KSbXZM/confianca-branco.png" },
-        { id: "coragem", label: "CORAGEM", img: "https://i.postimg.cc/Z5mZf3XC/coragem-branco.png" },
-        { id: "amizade", label: "AMIZADE", img: "https://i.postimg.cc/fW6M91K7/amizade-branco-1.png" },
-        { id: "luz", label: "LUZ", img: "https://i.postimg.cc/zvYPJwCh/LUZ-BRANCO-1.png" },
-        { id: "amor", label: "AMOR", img: "https://i.postimg.cc/7Y0wMXsF/AMOR-BRANCO-1.png" },
-        { id: "sinceridade", label: "SINCERIDADE", img: "https://i.postimg.cc/BvY0QzbK/SINCERIDADE-BRANCO-1.png" },
+        { id: "esperanca", label: "ESPERANÇA", imgPadrao: "https://i.postimg.cc/gkNg579R/esperanca-Branco.png", imgAtivo: "https://i.postimg.cc/fLf4pvjP/esperanca.png" },
+        { id: "sabedoria", label: "SABEDORIA", imgPadrao: "https://i.postimg.cc/bwZ4RPGd/sabedoria-Branco.png", imgAtivo: "https://i.postimg.cc/XJbSsPFF/sabedoria.png" },
+        { id: "confianca", label: "CONFIANÇA", imgPadrao: "https://i.postimg.cc/8kdKd5tZ/confianca-Branco.png", imgAtivo: "https://i.postimg.cc/WzpRvJ51/confianca.png" },
+        { id: "coragem", label: "CORAGEM", imgPadrao: "https://i.postimg.cc/ncHd3JWp/coragem-Branco.png", imgAtivo: "https://i.postimg.cc/J0pf44Fc/coragem.png" },
+        { id: "amizade", label: "AMIZADE", imgPadrao: "https://i.postimg.cc/WzV9LLbm/amizade-Branco.png", imgAtivo: "https://i.postimg.cc/T2QMcCPL/amizade.png" },
+        { id: "luz", label: "LUZ", imgPadrao: "https://i.postimg.cc/L5VxmCnc/luz-Branco.png", imgAtivo: "https://i.postimg.cc/JzDfM85Z/luz.png" },
+        { id: "amor", label: "AMOR", imgPadrao: "https://i.postimg.cc/3xNtHZ7q/amor-Branco.png", imgAtivo: "https://i.postimg.cc/3JRMfmyL/amor.png" },
+        { id: "sinceridade", label: "SINCERIDADE", imgPadrao: "https://i.postimg.cc/sX7nNDyD/sinceridade-Branco.png", imgAtivo: "https://i.postimg.cc/WbfBBzgs/sinceridade.png" },
     ];
 
     return (
@@ -26,7 +26,7 @@ function NavTemas() {
                         className={`tema ${temaItem.id} ${tema === temaItem.id ? "ativo" : ""}`}
                         onClick={() => trocarTema(temaItem.id)}
                     >
-                        <img src={temaItem.img} alt={temaItem.label} />
+                        <img src={tema === temaItem.id ? temaItem.imgAtivo : temaItem.imgPadrao} alt={temaItem.label} />
                         <span>{temaItem.label}</span>
                     </button>
                 ))}

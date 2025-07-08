@@ -1,0 +1,232 @@
+@import "./variables.scss";
+
+//extensão de temas para alterar apenas background, complemento do codigo está em HomeEstilo.scss
+
+//containerHome - background da tela incial
+//digimon-container - background da tela de digimons
+
+.tema-esperanca {
+    .containerHome {
+        background: $background-esperança;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .digimon-container {
+        background: $background-esperança;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.5);
+
+        .digimon-header {
+            .imgfpr1 {
+                display: none;
+                
+            }
+
+            .imgfpr2 {
+                display: block;
+            }
+        }
+
+    }
+
+}
+
+.tema-sabedoria {
+    .containerHome {
+        background: $background-sabedoria;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .digimon-container {
+        background: $background-sabedoria;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.5);
+
+        .digimon-header {
+            .imgfpr1 {
+                display: none;
+                
+            }
+
+            .imgfpr2 {
+                display: block;
+            }
+        }
+    }
+}
+
+.tema-confianca {
+    .containerHome {
+        background: $background-confianca;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .digimon-container {
+        background: $background-confianca;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.5);
+
+        .digimon-header {
+            .imgfpr1 {
+                display: none;
+                
+            }
+
+            .imgfpr2 {
+                display: block;
+            }
+        }
+    }
+}
+
+.tema-coragem {
+    .containerHome {
+        background: $background-coragem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .digimon-container {
+        background: $background-coragem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.5);
+
+        .digimon-header {
+            .imgfpr1 {
+                display: none;
+                
+            }
+
+            .imgfpr2 {
+                display: block;
+            }
+        }
+    }
+}
+
+.tema-amizade {
+    .containerHome {
+        background: $background-amizade;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .digimon-container {
+        background: $background-amizade;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.5);
+
+        .digimon-header {
+            .imgfpr1 {
+                display: none;
+                
+            }
+
+            .imgfpr2 {
+                display: block;
+            }
+        }
+    }
+}
+
+.tema-luz {
+    .containerHome {
+        background: $background-luz;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .digimon-container {
+        background: $background-luz;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.5);
+
+        .digimon-header {
+            .imgfpr1 {
+                display: none;
+                
+            }
+
+            .imgfpr2 {
+                display: block;
+            }
+        }
+    }
+}
+
+.tema-amor {
+    .containerHome {
+        background: $background-amor;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .digimon-container {
+        background: $background-amor;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.5);
+
+        .digimon-header {
+            .imgfpr1 {
+                display: none;
+                
+            }
+
+            .imgfpr2 {
+                display: block;
+            }
+        }
+    }
+}
+
+.tema-sinceridade {
+    .containerHome {
+        background: $background-sinceridade;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .digimon-container {
+        background: $background-sinceridade;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.5);
+
+        .digimon-header {
+            .imgfpr1 {
+                display: none;
+                
+            }
+
+            .imgfpr2 {
+                display: block;
+            }
+        }
+    }
+}

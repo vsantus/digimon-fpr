@@ -4,17 +4,21 @@ import HomePage from './pages/Home/index.jsx';
 import DigimonLista from './pages/DigimonPAge/index.jsx';
 
 import { TemaProvider } from './context/TemaContext.jsx';
+import { DigimonProvider } from './context/DigimonContext.jsx';
+
 
 function App() {
 
 
   return (
-    <TemaProvider>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/digimons" element={<DigimonLista />} />
-      </Routes>
-    </TemaProvider>
+    <DigimonProvider>
+      <TemaProvider>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/digimons" element={<DigimonLista />} />
+        </Routes>
+      </TemaProvider>
+    </DigimonProvider>
   )
 }
 

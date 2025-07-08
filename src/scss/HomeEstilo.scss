@@ -1,4 +1,4 @@
-@import "./variables";
+@import "./variables.scss";
 
 .containerHome {
     // alterar esse background com os botoes de NavTemas
@@ -15,12 +15,12 @@
 }
 
 .tema-esperanca {
-    .containerHome {
-        background: $background-esperança;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    // .containerHome {
+    //     background: $background-esperança;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 
     .conteudoLateral {
         display: none; // Esconde a imagem lateral
@@ -83,12 +83,12 @@
 }
 
 .tema-sabedoria {
-    .containerHome {
-        background: $background-sabedoria;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    // .containerHome {
+    //     background: $background-sabedoria;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 
     .conteudoLateral {
         display: none; // Esconde a imagem lateral
@@ -149,12 +149,12 @@
 }
 
 .tema-confianca {
-    .containerHome {
-        background: $background-confianca;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    // .containerHome {
+    //     background: $background-confianca;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 
     .conteudoLateral {
         display: none; // Esconde a imagem lateral
@@ -214,12 +214,12 @@
 }
 
 .tema-coragem {
-    .containerHome {
-        background: $background-coragem;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    // .containerHome {
+    //     background: $background-coragem;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 
     .conteudoLateral {
         display: none; // Esconde a imagem lateral
@@ -279,12 +279,12 @@
 }
 
 .tema-amizade {
-    .containerHome {
-        background: $background-amizade;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    // .containerHome {
+    //     background: $background-amizade;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 
     .conteudoLateral {
         display: none; // Esconde a imagem lateral
@@ -344,12 +344,12 @@
 }
 
 .tema-luz {
-    .containerHome {
-        background: $background-luz;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    // .containerHome {
+    //     background: $background-luz;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 
     .conteudoLateral {
         display: none; // Esconde a imagem lateral
@@ -409,12 +409,12 @@
 }
 
 .tema-amor {
-    .containerHome {
-        background: $background-amor;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    // .containerHome {
+    //     background: $background-amor;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 
     .conteudoLateral {
         display: none; // Esconde a imagem lateral
@@ -475,12 +475,12 @@
 }
 
 .tema-sinceridade {
-    .containerHome {
-        background: $background-sinceridade;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    // .containerHome {
+    //     background: $background-sinceridade;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
 
     .conteudoLateral {
         display: none; // Esconde a imagem lateral
@@ -583,7 +583,6 @@ nav {
     margin-top: 5px;
     right: -0px;
     top: 10px;
-    position: absolute;
 
     h2 {
         color: $laranja-cor;
@@ -626,8 +625,17 @@ nav {
         }
 
         img {
-            margin-bottom: 15px;
+            height: 30px;
+            width: auto;
+            margin-bottom: 10px;
+            padding: 5px;
             position: absolute;
+            object-fit: fill;
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.1);
+            }
+
         }
 
         .esperanca {
