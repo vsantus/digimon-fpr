@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Icon, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { useDigimonContext } from "../../context/DigimonContext";
 import "../../scss/variables.scss";
 import "../../scss/HomeEstilo.scss";
@@ -10,7 +10,7 @@ import NavTemas from "../../components/NavTemas"
 
 
 function HomePage() {
-    const { mensagemErro, buscarDigimon, carregarTodosDigimons, setDigimonSelecionado } = useDigimonContext ();
+    const { mensagemErro, buscarDigimon, carregarTodosDigimons, setDigimonSelecionado } = useDigimonContext();
     const [termoBusca, setTermoBusca] = useState("");
 
     const handleBusca = () => {
@@ -19,9 +19,13 @@ function HomePage() {
     };
 
     return (
-        <div className="containerHome"> 
+        <div className="containerHome">
             <header>
-                <IconSuperior />
+
+                <div className="home-iconSuperior">
+                    <IconSuperior />
+                </div>
+
                 <NavTemas />
             </header>
 

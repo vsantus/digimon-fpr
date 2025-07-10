@@ -14,20 +14,56 @@
 
     .digimon-header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         width: 100%;
         height: 120px;
         margin-bottom: 20px;
 
+        .digimon-iconSuperior {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 530px;
+            margin-top: 25px;
+        }
+
         .imgfpr1 {
-            width: 171px;
-            height: 119px;
+            margin-top: 10px;
+            margin-left: 13px;
+            width: 141px;
+            height: 89px;
         }
 
         .imgfpr2 {
             display: none;
-            width: 171px;
-            height: 119px;
+
+            margin-top: 10px;
+            margin-left: 13px;
+            width: 141px;
+            height: 89px;
+        }
+
+        .digimon-pesquisas {
+            display: flex;
+            margin-left: 400px;
+            margin-top: 25px;
+            gap: 25px;
+
+            input {
+                padding: 10px;
+                height: 36px;
+                border-radius: 7px;
+                border: none;
+            }
+
+            select {
+                padding: 10px;
+                height: 36px;
+                width: 185px;
+                border-radius: 7px;
+            }
         }
 
     }
@@ -35,27 +71,61 @@
     .digimon-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        width: 90%;
-        margin-bottom: 20px;
+        gap: 12px;
+        width: 80%;
+
 
         .digimon-card {
             display: flex;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             transition: transform 0.3s ease;
             width: 100%;
+            gap: 10px;
+            position: relative;
 
 
             img {
                 width: 100px;
                 height: 100px;
-                object-fit: contain;
+                object-fit: cover;
                 border-radius: 10%;
 
+
                 &:hover {
+                    cursor: pointer;
                     transform: scale(1.05);
                 }
+
+
+            }
+
+            .digimon-escolha {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0, 0, 0, 0.741);
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+                border-radius: 9%;
+                position: absolute; // não "fixed"
+                top: 100;
+                left: 100;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+
+
+                p {
+                    color: $branco-cor;
+                    font-size: 16px;
+                    font-weight: 200;
+                }
+
+
+
+
+
             }
 
 
@@ -70,7 +140,7 @@
                     color: $branco-cor;
                     margin: 10px 0 5px;
                     font-size: 16px;
-                    font-weight: 400;
+                    font-weight: 200;
                 }
 
                 p {
@@ -83,23 +153,41 @@
 
 
         }
+
+        .digimon-card:hover .digimon-escolha {
+            opacity: 1;
+        }
     }
 
     .pagination {
+
+        display: flex;
+        gap: 10px;
+        height: 100px;
+        align-items: flex-start;
+
 
         .botaoVoltar {
             position: fixed;
             left: 0px;
             margin-left: 20px;
-        }
-
-        display: flex;
-        gap: 10px;
-
-        .pagination-controles{
+            margin-top: 60px;
+            height: 30px;
+            width: 40px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+
+            &:hover {
+                background: $azulClaro-cor;
+            }
+
+        }
+
+        .pagination-controles {
+            display: flex;
+            align-items: center;
+            gap: 25px;
             margin-left: auto;
             margin-right: 20px;
             position: fixed;
@@ -107,17 +195,21 @@
         }
 
         button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
             background: $branco-cor;
             color: #000000;
             font-weight: 400;
-            padding: 8px 16px;
+            padding: 6px 10px; // sup inf x lef rig
             border-radius: 6px;
             cursor: pointer;
             transition: background 0.3s ease;
-            
+
 
             &:hover {
-                background: #0056b3;
+                background: $verdeClaro-cor;
             }
 
             &:disabled {
