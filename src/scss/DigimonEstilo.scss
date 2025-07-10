@@ -1,5 +1,7 @@
 @import './variables.scss';
 
+
+
 .digimon-container {
     width: 100%;
     height: 100vh;
@@ -114,6 +116,7 @@
                 left: 100;
                 opacity: 0;
                 transition: opacity 0.3s ease;
+                cursor: pointer;
 
 
                 p {
@@ -219,3 +222,4 @@
         }
     }
 }
+

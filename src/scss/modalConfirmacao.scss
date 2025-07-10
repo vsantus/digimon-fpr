@@ -1,3 +1,6 @@
+@import "./variables.scss";
+
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -8,15 +11,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    z-index: 1000; // Ensure the modal is above other content
+
 
 
 }
 
 .modal-content {
     background: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
+    height: 160px;
+    width: 370px;
+
+    .modal-x {
+
+        display: flex;
+        justify-content: flex-end;
+
+        .modal-fechar {
+            cursor: pointer;
+        }
+    }
+
+    p {
+        margin: 5px;
+        font-weight: 600;
+    }
+
+    .modal-botoes {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 25px;
+        gap: 10px;
+        width: 100%;
+
+        button {
+            padding: 10px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            ;
+        }
+
+
+        #btnN {
+            background-color: #E3E3E3; 
+            border: 1px solid #2C2C2C;
+            color: #000000;
+        }
+
+        #btnS {
+            background-color: #2C2C2C;
+            border: 1px solid #2C2C2C;
+            color: white;
+        }
+    }
 
 }

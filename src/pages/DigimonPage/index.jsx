@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { buscarTodosDigimons, buscarDigimonPorLevel } from "../../services/api";
-import { Undo2, ArrowLeft, ArrowRight } from "lucide-react";
+import { Undo2, ArrowLeft, ArrowRight, X } from "lucide-react";
 import "../../scss/DigimonEstilo.scss";
 import "../../scss/HomeEstilo.scss";
 import "../../scss/modalConfirmacao.scss";
@@ -28,6 +28,7 @@ const DigimonLista = () => {
     };
 
     const confirmarFavorito = () => {
+        window.alert(`Adicionado ${digimonSelecionado.name} aos favoritos!`);
         console.log(`Adicionado ${digimonSelecionado.name} aos favoritos!`);
         setMostrarModal(false);
     };
@@ -102,72 +103,80 @@ const DigimonLista = () => {
     return (
 
 
-        
 
 
-<div className="digimon-container">
 
-    { mostrarModal && (
-            <div className="modal-overlay">
-                <div className="modal-content">
-                    <p>Deseja adicionar <strong>{digimonSelecionado.name}</strong> aos favoritos?</p>
-                    <button onClick={confirmarFavorito}>Sim</button>
-                    <button onClick={cancelar}>Cancelar</button>
+        <div className="digimon-container">
+
+            {mostrarModal && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+
+                        <div className="modal-x"><X onClick={cancelar} size={15} className="modal-fechar" /></div>
+
+                        <p>Você deseja adicionar {digimonSelecionado.name} como favorito?</p>
+
+                        <div className="modal-botoes">
+                            <button onClick={cancelar} id="btnN">Não</button>
+                            <button onClick={confirmarFavorito} id="btnS">Sim</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            )}
+
+
+            <div className="digimon-header">
+                <img src="https://i.postimg.cc/yxnGFKvj/LOGO.png" alt="logo-fpr" className="imgfpr1" />
+                <img src="https://i.postimg.cc/PxmMQrkW/LOGO-branca.png" alt="logo-fpr-branca" className="imgfpr2" />
+
+                <div className="digimon-iconSuperior">
+                    <IconSuperior />
+                </div>
+
+                <div className="digimon-pesquisas">
+                    {/* pesquisar digimon por nome  */}
+                    <input type="text" placeholder="Digimon" value={termoBusca}
+                        onChange={(e) => {
+                            setTermoBusca(e.target.value);
+                            setPaginaAtual(1); // opcional: voltar para página 1 ao digitar
+                        }} />
+
+                    <select onChange={handleFiltroLevel}>
+                        <option value="">Todos</option>
+                        <option value="In Training">In Training</option>
+                        <option value="Rookie">Rookie</option>
+                        <option value="Champion">Champion</option>
+                        <option value="Ultimate">Ultimate</option>
+                        <option value="Mega">Mega</option>
+                    </select>
+                </div>
+
+                <NavTemas />
+            </div>
+
+            <div className="digimon-list">
+                {digimonsExibidos.map((digimon, index) => (
+                    <div key={index} className="digimon-card" >
+                        <img src={digimon.img} alt={digimon.name} />
+                        <div className="digimon-escolha" onClick={() => handleCardClick(digimon)}> <p> Escolher </p></div>
+                        <div className="digimon-info">
+                            <h3>Nome: {digimon.name}</h3>
+                            <p>Level: {digimon.level}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="pagination">
+                <button className="botaoVoltar" onClick={handleVoltar}><Undo2 size={16} /></button>
+                <div className="pagination-controles">
+                    <button onClick={paginaAnterior} disabled={paginaAtual === 1}><ArrowLeft size={14} /> Anterior</button>
+                    <button onClick={proximaPagina} disabled={indexUltimo >= digimons.length}>Próximo <ArrowRight size={14} /></button>
                 </div>
             </div>
-        )}
-
-
-    <div className="digimon-header">
-        <img src="https://i.postimg.cc/yxnGFKvj/LOGO.png" alt="logo-fpr" className="imgfpr1" />
-        <img src="https://i.postimg.cc/PxmMQrkW/LOGO-branca.png" alt="logo-fpr-branca" className="imgfpr2" />
-
-        <div className="digimon-iconSuperior">
-            <IconSuperior />
         </div>
-
-        <div className="digimon-pesquisas">
-            {/* pesquisar digimon por nome  */}
-            <input type="text" placeholder="Digimon" value={termoBusca}
-                onChange={(e) => {
-                    setTermoBusca(e.target.value);
-                    setPaginaAtual(1); // opcional: voltar para página 1 ao digitar
-                }} />
-
-            <select onChange={handleFiltroLevel}>
-                <option value="">Todos</option>
-                <option value="In Training">In Training</option>
-                <option value="Rookie">Rookie</option>
-                <option value="Champion">Champion</option>
-                <option value="Ultimate">Ultimate</option>
-                <option value="Mega">Mega</option>
-            </select>
-        </div>
-
-        <NavTemas />
-    </div>
-
-    <div className="digimon-list">
-        {digimonsExibidos.map((digimon, index) => (
-            <div key={index} className="digimon-card" >
-                <img src={digimon.img} alt={digimon.name} />
-                <div className="digimon-escolha" onClick={() => handleCardClick(digimon)}> <p> Escolher </p></div>
-                <div className="digimon-info">
-                    <h3>Nome: {digimon.name}</h3>
-                    <p>Level: {digimon.level}</p>
-                </div>
-            </div>
-        ))}
-    </div>
-
-    <div className="pagination">
-        <button className="botaoVoltar" onClick={handleVoltar}><Undo2 size={16} /></button>
-        <div className="pagination-controles">
-            <button onClick={paginaAnterior} disabled={paginaAtual === 1}><ArrowLeft size={14} /> Anterior</button>
-            <button onClick={proximaPagina} disabled={indexUltimo >= digimons.length}>Próximo <ArrowRight size={14} /></button>
-        </div>
-    </div>
-</div>
     );
 };
 
