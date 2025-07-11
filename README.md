@@ -80,6 +80,6 @@ npm run dev
 
 ---
 
-Desenvolvido com 💙 por [Vinicius Santos](https://github.com/vsantus).
+Desenvolvido por [Vinicius Santos](https://www.linkedin.com/in/vsantus/).
 
 ---
