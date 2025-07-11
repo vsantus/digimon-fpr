@@ -581,7 +581,7 @@ header {
     width: 70px;
     height: 70px;
     overflow: hidden;
-    white-space: nowrap;
+
 
     img {
         width: 100%;
@@ -595,8 +595,6 @@ nav {
     // botoes de troca de tema 
     margin-right: 25px;
     margin-top: 5px;
-    right: -0px;
-    top: 10px;
 
     h2 {
         color: $laranja-cor;
@@ -613,7 +611,7 @@ nav {
         display: flex;
         list-style: none;
         gap: 8px;
-        position: relative;
+
 
         .tema {
             //dimensão do botao
@@ -750,7 +748,6 @@ nav {
 .principalContainer {
     // container principal com infos
     display: flex;
-    position: relative;
     justify-content: space-between;
     margin-top: 60px;
     width: 100%;
@@ -766,8 +763,7 @@ nav {
     text-align: center;
     width: 494px;
     max-height: 400px;
-    position: absolute;
-    left: 110px;
+    transform: translateX(110px);
 
 
     .img1 {
@@ -918,5 +914,55 @@ nav {
         // remover imagem ao clicar botao de tema
         width: 100%;
         height: 100%;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1100; // caso precise sobrepor
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    &.open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    &.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        padding: 20px;
+    }
+
+    .temas-opcoes {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px; // ajuste conforme sua header
+        right: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .temas-opcoes.aberto {
+        display: flex;
     }
 }

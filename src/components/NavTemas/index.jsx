@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
-import { TemaContext } from "../../context/TemaContext"; // ajuste o caminho conforme sua pasta
-import "../../scss/HomeEstilo.scss"; // ajuste o caminho conforme sua pasta
+import React, { useContext, useState } from "react";
+import { TemaContext } from "../../context/TemaContext";
+import "../../scss/HomeEstilo.scss";
 
 function NavTemas() {
     const { tema, trocarTema } = useContext(TemaContext);
+    const [menuAberto, setMenuAberto] = useState(false);
 
     const temas = [
         { id: "esperanca", label: "ESPERANÇA", imgPadrao: "https://i.postimg.cc/gkNg579R/esperanca-Branco.png", imgAtivo: "https://i.postimg.cc/fLf4pvjP/esperanca.png" },
@@ -17,9 +18,15 @@ function NavTemas() {
     ];
 
     return (
-        <nav>
+        <nav className="nav-temas">
+            <div className="menu-toggle" onClick={() => setMenuAberto(!menuAberto)}>
+                {/* Ícone hamburguer simples */}
+                <div className={`bar ${menuAberto ? "open" : ""}`}></div>
+                <div className={`bar ${menuAberto ? "open" : ""}`}></div>
+                <div className={`bar ${menuAberto ? "open" : ""}`}></div>
+            </div>
             <h2>Escolha seu Tema</h2>
-            <ul className="temas-opcoes">
+            <ul className={`temas-opcoes ${menuAberto ? "aberto" : ""}`}>
                 {temas.map((temaItem) => (
                     <button
                         key={temaItem.id}

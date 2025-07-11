@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { buscarTodosDigimons, buscarDigimonPorLevel } from "../../services/api";
+import { useDigimonContext } from "../../context/DigimonContext";
 import { Undo2, ArrowLeft, ArrowRight, X } from "lucide-react";
 import "../../scss/DigimonEstilo.scss";
 import "../../scss/HomeEstilo.scss";
 import "../../scss/modalConfirmacao.scss";
+import "../../scss/responsivo.scss";
 
 import IconSuperior from "../../components/iconSuperior";
 import NavTemas from "../../components/NavTemas";
@@ -15,6 +17,8 @@ const DigimonLista = () => {
     const [termoBusca, setTermoBusca] = useState("");
     const [digimonSelecionado, setDigimonSelecionado] = useState(null);
     const [mostrarModal, setMostrarModal] = useState(false);
+
+    const { setDigimonFavorito } = useDigimonContext();
 
 
 
@@ -28,10 +32,11 @@ const DigimonLista = () => {
     };
 
     const confirmarFavorito = () => {
-        window.alert(`Adicionado ${digimonSelecionado.name} aos favoritos!`);
-        console.log(`Adicionado ${digimonSelecionado.name} aos favoritos!`);
-        setMostrarModal(false);
-    };
+    setDigimonFavorito(digimonSelecionado); // 
+    window.alert(`${digimonSelecionado.name} foi adicionado aos favoritos!`);
+    setMostrarModal(false);
+};
+
 
     const cancelar = () => {
         setMostrarModal(false);
@@ -101,11 +106,6 @@ const DigimonLista = () => {
     };
 
     return (
-
-
-
-
-
         <div className="digimon-container">
 
             {mostrarModal && (
@@ -152,15 +152,15 @@ const DigimonLista = () => {
                         <option value="Mega">Mega</option>
                     </select>
                 </div>
+                <div className="digimon-navtemas"><NavTemas /></div>
 
-                <NavTemas />
             </div>
 
             <div className="digimon-list">
                 {digimonsExibidos.map((digimon, index) => (
                     <div key={index} className="digimon-card" >
                         <img src={digimon.img} alt={digimon.name} />
-                        <div className="digimon-escolha" onClick={() => handleCardClick(digimon)}> <p> Escolher </p></div>
+                        <div className="digimon-escolha" onClick={() => handleCardClick(digimon)} > <p> Escolher </p></div>
                         <div className="digimon-info">
                             <h3>Nome: {digimon.name}</h3>
                             <p>Level: {digimon.level}</p>

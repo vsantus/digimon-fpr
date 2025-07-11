@@ -4,19 +4,27 @@ import { useDigimonContext } from "../../context/DigimonContext";
 import "../../scss/variables.scss";
 import "../../scss/HomeEstilo.scss";
 import "../../scss/Temas.scss";
+import "../../scss/responsivo.scss";
 
 import IconSuperior from "../../components/iconSuperior";
 import NavTemas from "../../components/NavTemas"
 
 
 function HomePage() {
-    const { mensagemErro, buscarDigimon, carregarTodosDigimons, setDigimonSelecionado } = useDigimonContext();
+    const { mensagemErro, buscarDigimon, carregarTodosDigimons, setDigimonSelecionado, setDigimonFavorito } = useDigimonContext();
+ 
     const [termoBusca, setTermoBusca] = useState("");
 
-    const handleBusca = () => {
-        buscarDigimon(termoBusca); // Chama a função de busca
-        setDigimonSelecionado(termoBusca);
-    };
+
+    const handleBusca = async () => {
+    const resultado = await buscarDigimon(termoBusca);
+    setDigimonSelecionado(termoBusca);
+    if (resultado && resultado.length > 0) {
+        setDigimonFavorito(resultado[0]);
+    }
+};
+
+
 
     return (
         <div className="containerHome">

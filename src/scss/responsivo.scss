@@ -1,50 +1,532 @@
-// @media (max-width: 1366px) {
-//     .containerPrincipal {
-//         width: 100%;
-//         height: auto; /* Ajusta a altura automaticamente em telas menores */
-//     }
+@import "../scss/variables.scss";
 
-//     .main-content {
-//         width: 90%; /* Ajusta a largura do conteúdo principal para telas menores */
-//         position: relative; /* Garante que o conteúdo seja ajustado corretamente */
-//         left: 5%; /* Adiciona uma margem para centralizar */
-//     }
 
-//     .conteudo-esquerda {
-//         width: 80%; /* Ajusta a largura do conteúdo da esquerda */
-//         height: auto; /* Permite que a altura seja ajustada automaticamente */
-//         position: relative;
-//         left: 0;
-//     }
-// }
 
-// @media (max-width: 768px) {
-//     .containerPrincipal {
-//         width: 100%;
-//         height: auto;
-//         flex-direction: column; /* Alinha os itens verticalmente */
-//     }
+@media (max-width: 768px) {
 
-//     .main-content {
-//         width: 100%;
-//         text-align: center;
-//         left: 0; /* Centraliza o conteúdo */
-//     }
+    //     /* Estilos para dispositivos móveis */
 
-//     .conteudo-esquerda {
-//         width: 100%;
-//         height: auto;
-//         position: relative;
-//         left: 0;
-//     }
+    //HomeEstilo.scss
+    .principalContainer {
+        justify-content: center;
+    }
 
-//     .temas-opcoes {
-//         flex-direction: column; /* Alinha os temas em uma coluna */
-//         gap: 10px;
-//     }
+    .containerHome {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
 
-//     .tema {
-//         width: 100%;
-//         height: 50px; /* Ajusta o tamanho dos temas */
-//     }
+    .tema-esperanca {
+
+        .img1 {
+            display: none; // Esconde a imagem lateral
+        }
+
+        .img2 {
+            display: block; // Exibe a imagem lateral
+        }
+
+    }
+
+    .tema-sabedoria {
+
+        .conteudoCentral {
+            .img1 {
+                display: none; // Esconde a imagem lateral
+            }
+
+            .img2 {
+                display: block; // Exibe a imagem lateral
+            }
+
+        }
+
+
+    }
+
+    .tema-confianca {
+
+        .conteudoCentral {
+            .img1 {
+                display: none; // Esconde a imagem lateral
+            }
+
+            .img2 {
+                display: block; // Exibe a imagem lateral
+            }
+
+        }
+
+
+    }
+
+    .tema-coragem {
+
+        .conteudoCentral {
+            .img1 {
+                display: none; // Esconde a imagem lateral
+            }
+
+            .img2 {
+                display: block; // Exibe a imagem lateral
+            }
+
+        }
+
+
+    }
+
+    .tema-amizade {
+
+        .conteudoCentral {
+            .img1 {
+                display: none; // Esconde a imagem lateral
+            }
+
+            .img2 {
+                display: block; // Exibe a imagem lateral
+            }
+
+        }
+
+
+    }
+
+    .tema-luz {
+
+        .conteudoCentral {
+            .img1 {
+                display: none; // Esconde a imagem lateral
+            }
+
+            .img2 {
+                display: block; // Exibe a imagem lateral
+            }
+
+        }
+
+
+    }
+
+    .tema-amor {
+
+        .conteudoCentral {
+            .img1 {
+                display: none; // Esconde a imagem lateral
+            }
+
+            .img2 {
+                display: block; // Exibe a imagem lateral
+            }
+
+        }
+
+
+    }
+
+    .tema-sinceridade {
+
+        .conteudoCentral {
+            .img1 {
+                display: none; // Esconde a imagem lateral
+            }
+
+            .img2 {
+                display: block; // Exibe a imagem lateral
+            }
+
+        }
+
+
+    }
+
+    header {
+        display: flex;
+        align-items: flex-start;
+
+
+        .home-iconSuperior {
+            top: 0;
+            height: 100%;
+        }
+    }
+
+    nav {
+        margin-right: 5px;
+
+        h2 {
+            display: none;
+        }
+
+        .temas-opcoes {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+        }
+
+
+        .temas-opcoes {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            top: 60px; // ajustar conforme seu header
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+
+            &.aberto {
+                display: flex;
+            }
+        }
+    }
+
+    .conteudoCentral {
+        width: 314px;
+        max-height: 600px;
+        justify-content: flex-end;
+        transform: translateX(-50px) !important;
+        transform: translateY(-50px) !important;
+
+
+        .img1 {
+
+            margin-left: 20px;
+            width: 151px;
+            height: 100px;
+
+        }
+
+        .img2 {
+            margin-left: 20px;
+            width: 151px;
+            height: 100px;
+
+        }
+
+        h4 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 9px;
+            text-align: left;
+            width: 250px;
+        }
+
+        .botoes {
+
+            gap: 10px;
+            .barraPesquisa {
+                justify-content: flex-end;
+
+            }
+        }
+
+
+    }
+
+    .conteudoLateral {
+        display: none;
+    }
+
+    //Temas.scss
+    .tema-esperanca {
+        .containerHome {
+            background: $esperanca;
+        }
+
+        .digimon-container {
+            background: $esperanca;
+
+            .digimon-header {
+                .imgfpr1 {
+                    display: none;
+
+                }
+
+                .imgfpr2 {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    .tema-sabedoria {
+        .containerHome {
+            background: $sabedoria;
+        }
+
+        .digimon-container {
+            background: $sabedoria;
+
+            .digimon-header {
+                .imgfpr1 {
+                    display: none;
+
+                }
+
+                .imgfpr2 {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    .tema-confianca {
+        .containerHome {
+            background: $confianca;
+        }
+
+        .digimon-container {
+            background: $confianca;
+
+            .digimon-header {
+                .imgfpr1 {
+                    display: none;
+
+                }
+
+                .imgfpr2 {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+
+    .tema-coragem {
+        .containerHome {
+            background: $coragem;
+        }
+
+        .digimon-container {
+            background: $coragem;
+
+            .digimon-header {
+                .imgfpr1 {
+                    display: none;
+
+                }
+
+                .imgfpr2 {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    .tema-amizade {
+        .containerHome {
+            background: $amizade;
+        }
+
+        .digimon-container {
+            background: $amizade;
+
+            .digimon-header {
+                .imgfpr1 {
+                    display: none;
+
+                }
+
+                .imgfpr2 {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    .tema-luz {
+        .containerHome {
+            background: $luz;
+        }
+
+        .digimon-container {
+            background: $luz;
+
+            .digimon-header {
+                .imgfpr1 {
+                    display: none;
+
+                }
+
+                .imgfpr2 {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    .tema-amor {
+        .containerHome {
+            background: $amor;
+        }
+
+        .digimon-container {
+            background: $amor;
+
+            .digimon-header {
+                .imgfpr1 {
+                    display: none;
+
+                }
+
+                .imgfpr2 {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    .tema-sinceridade {
+        .containerHome {
+            background: $sinceridade;
+        }
+
+        .digimon-container {
+            background: $sinceridade;
+
+            .digimon-header {
+                .imgfpr1 {
+                    display: none;
+
+                }
+
+                .imgfpr2 {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+
+    //DigimonEstilo.scss
+
+    .digimon-container {
+        padding: 5px;
+        height: auto;
+
+
+        .digimon-header {
+            width: 50%;
+            height: auto;
+
+            .digimon-iconSuperior {
+                transform: translateX(120px) !important;
+            }
+
+            .imgfpr1,
+            .imgfpr2 {
+                img {
+                    display: none !important;
+                }
+            }
+
+            .digimon-pesquisas {
+                transform: translateX(-220px) !important;
+                margin-left: 0px;
+                padding-right: 0px;
+                gap: 0px;
+
+
+                input,
+                select {
+                    width: 50%;
+                }
+            }
+
+            .digimon-navtemas {
+                transform: translateX(-250px) !important;
+            }
+        }
+
+        .digimon-list {
+            grid-template-columns: repeat(2, 1fr) !important;
+            height: 400px;
+            gap: 0px !important;
+
+
+            .digimon-card {
+                flex-direction: column;
+                padding: 0px !important;
+                gap: 0px !important;
+
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                .digimon-escolha {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                .digimon-info {
+                    margin: 0px 0px 5px 0px !important;
+                    text-align: center;
+                    width: 50px;
+
+                    h3 {
+                        font-size: 14px;
+                    }
+
+                    p {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .pagination {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .botaoVoltar {
+                margin: 0px;
+                transform: translateY(20px) !important;
+            }
+
+            .pagination-controles {
+                transform: translateY(83px) !important;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+
+}
+
+// @media (min-width: 769px) and (max-width: 1024px) {
+//     /* Estilos para tablets */
+
+
 // }

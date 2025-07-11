@@ -17,7 +17,7 @@
     .digimon-header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         height: 120px;
         margin-bottom: 20px;
@@ -26,9 +26,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            left: 530px;
             margin-top: 25px;
+            transform: translateX(300px);
+
         }
 
         .imgfpr1 {
@@ -49,7 +49,8 @@
 
         .digimon-pesquisas {
             display: flex;
-            margin-left: 400px;
+            margin-left: 350px;
+            padding-right: 20px;
             margin-top: 25px;
             gap: 25px;
 
@@ -67,6 +68,8 @@
                 border-radius: 7px;
             }
         }
+
+        
 
     }
 
@@ -222,4 +225,3 @@
         }
     }
 }
-

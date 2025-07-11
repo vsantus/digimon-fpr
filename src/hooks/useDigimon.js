@@ -5,6 +5,7 @@ import { buscarTodosDigimons, buscarDigimonPorNome, buscarDigimonPorLevel } from
 export function useDigimon() {
     const [listaDigimons, setListaDigimons] = useState([]);
     const [mensagemErro, setMensagemErro] = useState("");
+    const [digimonFavorito, setDigimonFavorito] = useState(null);
     const navigate = useNavigate();
 
     const carregarTodosDigimons = async () => {
@@ -15,19 +16,21 @@ export function useDigimon() {
     };
 
     const buscarDigimon = async (nome) => {
-        if (!nome.trim()) return; 
+    if (!nome.trim()) return;
 
-        setMensagemErro(""); 
+    setMensagemErro("");
 
-        const resultado = await buscarDigimonPorNome(nome.toLowerCase());
+    const resultado = await buscarDigimonPorNome(nome.toLowerCase());
 
-        if (resultado.length > 0) {
-            setListaDigimons(resultado);
-        } else {
-            window.alert("Nenhum Digimon encontrado, pesquise o nome correto!"); 
-            setListaDigimons([]); 
-        }
-    };
+    if (resultado.length > 0) {
+        setListaDigimons(resultado);
+        return resultado; // <-- RETORNAR
+    } else {
+        window.alert("Nenhum Digimon encontrado, pesquise o nome correto!");
+        setListaDigimons([]);
+        return []; // <-- RETORNAR array vazio
+    }
+};
 
     const buscarDigimonLevel = async (level) => {
         if (!level.trim()) return; 
@@ -47,6 +50,8 @@ export function useDigimon() {
     return {
         listaDigimons,
         mensagemErro,
+        digimonFavorito,       
+        setDigimonFavorito,
         buscarDigimon,
         buscarDigimonLevel,
         carregarTodosDigimons,  
