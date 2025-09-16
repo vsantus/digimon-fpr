@@ -2,10 +2,6 @@ import axios from "axios";
 
 const API_URL = "https://digimon-api.vercel.app/api/digimon";
 
-// Função para buscar todos os Digimons
-
-
-//usado na pagina digimon
 export const buscarTodosDigimons = async () => {
     try {
         const response = await fetch("https://digimon-api.vercel.app/api/digimon");
@@ -17,10 +13,6 @@ export const buscarTodosDigimons = async () => {
     }
 };
 
-
-// Função para buscar um Digimon pelo nome
-
-//usando no card superior
 export const buscarDigimonPorNome = async (nome) => {
     try {
         const response = await axios.get(`${API_URL}/name/${nome}`);
@@ -31,8 +23,6 @@ export const buscarDigimonPorNome = async (nome) => {
     }
 };
 
-
-//usado na pagina digimon
 export const buscarDigimonPorLevel = async (level) => {
     try {
         const response = await axios.get(`${API_URL}/level/${level}`);
